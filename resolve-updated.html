@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RESOLVE — Practical AI Systems for Business Workflows</title>
+<meta content="RESOLVE builds practical AI systems around repetitive business workflows, sales operations, research, documents and internal operations." name="description"/>
+<!-- Open Graph / Meta -->
+<meta content="website" property="og:type"/>
+<meta content="RESOLVE — Practical AI Systems for Business Workflows" property="og:title"/>
+<meta content="RESOLVE builds practical AI systems around repetitive business workflows, sales operations, research, documents and internal operations." property="og:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="RESOLVE — Practical AI Systems for Business Workflows" name="twitter:title"/>
+<meta content="RESOLVE builds practical AI systems around repetitive business workflows, sales operations, research, documents and internal operations." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#002626",
+            "error": "#ba1a1a",
+            "surface-dim": "#d8dada",
+            "on-tertiary-fixed": "#002021",
+            "surface-container": "#eceeee",
+            "surface-container-high": "#e6e8e9",
+            "primary": "#083B4C",
+            "on-primary-container": "#7ba5b9",
+            "tertiary-container": "#003d3e",
+            "on-tertiary-container": "#5cabad",
+            "surface-tint": "#396476",
+            "surface-bright": "#f8fafa",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004f51",
+            "surface-container-highest": "#e1e3e3",
+            "on-secondary-fixed-variant": "#004f56",
+            "secondary-fixed-dim": "#92d1d9",
+            "on-surface-variant": "#41484b",
+            "outline-variant": "#c1c7cc",
+            "outline": "#71787c",
+            "inverse-primary": "#a2cde2",
+            "secondary-fixed": "#5FAEB0",
+            "on-primary-fixed": "#001f2a",
+            "secondary-container": "#abeaf2",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#a1f0f2",
+            "primary-fixed-dim": "#a2cde2",
+            "on-primary-fixed-variant": "#1f4c5d",
+            "tertiary-fixed-dim": "#85d4d6",
+            "inverse-on-surface": "#eff1f1",
+            "background": "#F8FAFA",
+            "on-error-container": "#93000a",
+            "on-primary": "#ffffff",
+            "on-background": "#191c1d",
+            "surface-container-low": "#f2f4f4",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed": "#001f23",
+            "surface": "#F8FAFA",
+            "on-surface": "#191c1d",
+            "surface-variant": "#e1e3e3",
+            "primary-fixed": "#bee9ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary": "#0F5963",
+            "primary-container": "#083B4C",
+            "on-secondary-container": "#2a6b73",
+            "inverse-surface": "#2e3131"
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "1.75rem",
+            "xl": "2.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.375rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.75rem",
+            "margin": "3rem",
+            "space-lg": "2rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1.25rem",
+            "space-xl": "3.5rem",
+            "gutter": "1.5rem",
+            "space-2xl": "5rem"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-sans text-on-surface antialiased selection:bg-secondary-fixed/30 selection:text-primary" id="top">
+<!-- NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 z-50 pt-4 px-margin-mobile md:px-margin">
+<div class="max-w-[1240px] mx-auto h-20 px-space-md md:px-space-lg flex items-center justify-between rounded-full bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_12px_32px_-8px_rgba(8,59,76,0.05),0_2px_6px_-1px_rgba(8,59,76,0.02)] border border-outline-variant/30">
+<a aria-label="RESOLVE Home" class="flex items-center gap-3 group" href="#top">
+<img alt="RESOLVE Logo" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY8_spXiEoHU8_UcNgRgM420Yq8brkywxasJaIKdPdxH3_4Mk2bu366qjL0LL4E-Z_2p1k7CXBIie13F_v4T3OWNbRlNTrY-uDc0seDv9cEw1TzlnhHbRkbfxDIyZbOPc8xl1wC12dUpRoTDHJQ6-QZbKGw-V2WhAHretde-K04fMGUnscEYZJRtSpZX3ZT-DJ2HjBhsyzWgCpQ88F32USA_jFAvMAcq3JoGePW9QikLvku8bjR6GuELmh2sN4Agb2Sw"/>
+<span class="text-xl tracking-tight font-bold text-primary group-hover:text-secondary transition-colors">RESOLVE</span>
+</a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-space-lg">
+<nav class="flex items-center gap-8">
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#work">Work</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#approach">Approach</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+</nav>
+<a class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary-container text-on-primary text-sm font-semibold hover:bg-secondary transition-all shadow-[0_4px_16px_rgba(8,59,76,0.12)]" href="#contact">
+          Talk to us →
+        </a>
+</div>
+<!-- Mobile Hamburger Button -->
+<div class="md:hidden flex items-center">
+<button aria-label="Open mobile menu" class="p-2 text-primary focus:outline-none" id="mobile-menu-btn" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Dropdown Menu -->
+<div class="hidden md:hidden mt-2 mx-auto max-w-[1240px] bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-5 shadow-lg flex flex-col gap-4" id="mobile-menu">
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary py-1" href="#work" onclick="toggleMobileMenu()">Work</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary py-1" href="#approach" onclick="toggleMobileMenu()">Approach</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary py-1" href="#about" onclick="toggleMobileMenu()">About</a>
+<a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary text-on-primary text-sm font-semibold" href="#contact" onclick="toggleMobileMenu()">
+        Talk to us →
+      </a>
+</div>
+</header>
+<main class="w-full pt-28 md:pt-32 bg-background">
+<div class="flex flex-col w-full max-w-[1240px] mx-auto px-margin-mobile md:px-margin">
+<!-- SECTION 1 — HERO -->
+<section class="relative w-full rounded-xl bg-surface-container-low/70 py-16 md:py-24 px-6 md:px-16 overflow-hidden border border-outline-variant/20 shadow-sm text-center">
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary-fixed/15 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center max-w-3xl mx-auto">
+<!-- Top Eyebrow -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-lowest shadow-sm mb-6 border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-bold text-secondary tracking-wider uppercase">PRACTICAL AI SYSTEMS</span>
+</div>
+<!-- Main Headline -->
+<h1 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-tight md:leading-[1.15]">
+            Practical AI systems for messy business workflows.
+          </h1>
+<!-- Supporting Text -->
+<p class="text-lg md:text-xl text-on-surface-variant mt-6 max-w-2xl font-normal leading-relaxed">
+            We find repetitive work that slows businesses down and build focused systems to make it simpler.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-4 mt-10">
+<a class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-primary-container text-on-primary text-sm font-semibold hover:bg-secondary transition-all shadow-md hover:shadow-lg" href="#contact">
+              Talk about a workflow →
+            </a>
+<a class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-surface-container-lowest text-primary text-sm font-semibold border border-outline-variant/30 hover:bg-surface-container-high transition-all shadow-sm" href="#work">
+              See our work ↓
+            </a>
+</div>
+</div>
+</section>
+<!-- SECTION 2 — THE PROBLEM -->
+<section class="mt-space-2xl py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-5">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest block mb-3">THE REALITY OF WORK</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary tracking-tight leading-snug">
+              Some of the most expensive work in a business is the work nobody notices.
+            </h2>
+</div>
+<div class="lg:col-span-7">
+<p class="text-lg text-on-surface-variant leading-relaxed">
+              We look for repetitive work hiding inside everyday operations — the tasks that consume time, move between people and tools, and rarely create much value on their own. That's where we look for opportunities to build something better.
+            </p>
+<!-- 5 Clean Problem Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold text-outline block mb-2">01 — FINDING</span>
+<p class="font-bold text-primary text-base">Hunting scattered information.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-xl mt-4 self-end">manage_search</span>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold text-outline block mb-2">02 — ENTERING</span>
+<p class="font-bold text-primary text-base">Manual data re-entry.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-xl mt-4 self-end">input</span>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold text-outline block mb-2">03 — CHECKING</span>
+<p class="font-bold text-primary text-base">Repeated document and compliance checks.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-xl mt-4 self-end">verified_user</span>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold text-outline block mb-2">04 — FOLLOWING UP</span>
+<p class="font-bold text-primary text-base">Tracking delayed responses and next actions.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-xl mt-4 self-end">schedule_send</span>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col justify-between sm:col-span-2 lg:col-span-2">
+<div>
+<span class="text-xs font-bold text-outline block mb-2">05 — COORDINATING</span>
+<p class="font-bold text-primary text-base">Managing handoffs between people and tools.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-xl mt-4 self-end">alt_route</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3 — WHERE WE HELP (WORKFLOW DOMAINS) -->
+<section class="mt-space-2xl pt-6" id="approach">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest block mb-2">WORKFLOW DOMAINS</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary tracking-tight">Where we help</h2>
+</div>
+<p class="text-base text-on-surface-variant max-w-md">
+            We work around the workflows that keep a business moving — removing mechanical drag so humans focus on high-judgment decisions.
+          </p>
+</div>
+<!-- 5-card Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Card 1 -->
+<div class="md:col-span-7 rounded-xl bg-secondary-container/30 border border-secondary-fixed/20 p-8 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold text-secondary tracking-widest uppercase block mb-2">01 / Sales &amp; Enquiries</span>
+<h3 class="text-2xl font-bold text-primary">Lead Qualification &amp; Response</h3>
+<p class="text-on-surface-variant mt-3 text-base leading-relaxed">
+                Lead qualification, follow-ups, opportunity management and repetitive sales workflows.
+              </p>
+</div>
+<div class="mt-6 flex items-center justify-between text-secondary">
+<span class="text-xs font-semibold uppercase tracking-wider">Structured Follow-ups</span>
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="md:col-span-5 rounded-xl bg-primary text-on-primary p-8 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-secondary-fixed tracking-widest uppercase block mb-2">02 / Customer Operations</span>
+<h3 class="text-2xl font-bold text-on-primary">Customer Handoffs</h3>
+<p class="text-on-primary/80 mt-3 text-base leading-relaxed">
+                Appointments, customer requests, communication workflows and operational handoffs.
+              </p>
+</div>
+<div class="mt-6 flex items-center justify-between text-secondary-fixed">
+<span class="text-xs font-semibold uppercase tracking-wider">Direct Routing</span>
+<span class="material-symbols-outlined">hub</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="md:col-span-4 rounded-xl bg-secondary text-on-primary p-8 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-secondary-fixed tracking-widest uppercase block mb-2">03 / Internal Operations</span>
+<h3 class="text-xl font-bold">Coordination &amp; Entry</h3>
+<p class="text-on-primary/80 mt-3 text-sm leading-relaxed">
+                Task management, data entry, team coordination, approvals and recurring internal workflows.
+              </p>
+</div>
+<div class="mt-6 flex items-center justify-between text-secondary-fixed">
+<span class="text-xs font-semibold uppercase tracking-wider">Unified Sync</span>
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-outline tracking-widest uppercase block mb-2">04 / Research &amp; Intelligence</span>
+<h3 class="text-xl font-bold text-primary">Information Synthesis</h3>
+<p class="text-on-surface-variant mt-3 text-sm leading-relaxed">
+                Information discovery, analysis, structured reporting and decision-support workflows.
+              </p>
+</div>
+<div class="mt-6 flex items-center justify-between text-secondary">
+<span class="text-xs font-semibold uppercase tracking-wider">Structured Intelligence</span>
+<span class="material-symbols-outlined">psychology</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="md:col-span-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-outline tracking-widest uppercase block mb-2">05 / Document Workflows</span>
+<h3 class="text-xl font-bold text-primary">Document Verification</h3>
+<p class="text-on-surface-variant mt-3 text-sm leading-relaxed">
+                Extracting, checking and structuring information from complex business documents.
+              </p>
+</div>
+<div class="mt-6 flex items-center justify-between text-secondary">
+<span class="text-xs font-semibold uppercase tracking-wider">Audit Continuity</span>
+<span class="material-symbols-outlined">description</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4 — SELECTED WORK -->
+<section class="mt-space-2xl pt-6" id="work">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest block mb-2">SELECTED WORK</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary tracking-tight">Built around real business problems.</h2>
+</div>
+<p class="text-base text-on-surface-variant max-w-md">
+            A selection of systems, prototypes and experiments built around practical, messy workflows.
+          </p>
+</div>
+<!-- Clean, compact 2-column grid of 4 project cards with NO inline workflow diagrams -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+<!-- Project 1 -->
+<div class="group rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between gap-2 mb-5">
+<span class="text-xs font-medium px-3 py-1 rounded-full bg-surface-container text-on-surface-variant">Real Estate · Sales Operations</span>
+<span class="text-xs font-semibold text-secondary flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed/15">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Prototype
+              </span>
+</div>
+<h3 class="text-2xl font-bold text-primary tracking-tight font-sans">AI Sales Opportunity Assistant</h3>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">
+              A lightweight AI-assisted sales opportunity management prototype that turns salesperson interaction notes into structured opportunity context, next actions and follow-ups.
+            </p>
+</div>
+<button class="mt-8 inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:text-secondary transition-colors self-start" onclick="toggleCaseStudy('modal-1')">
+            View workflow →
+          </button>
+</div>
+<!-- Project 2 -->
+<div class="group rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between gap-2 mb-5">
+<span class="text-xs font-medium px-3 py-1 rounded-full bg-surface-container text-on-surface-variant">Healthcare · Intelligence · Compliance</span>
+<span class="text-xs font-semibold text-secondary flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed/15">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Demonstration
+              </span>
+</div>
+<h3 class="text-2xl font-bold text-primary tracking-tight font-sans">Hospital Compliance Intelligence</h3>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">
+              An AI-assisted first-pass screening and audit-support system designed to turn complex hospital drawings into structured compliance intelligence.
+            </p>
+</div>
+<button class="mt-8 inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:text-secondary transition-colors self-start" onclick="toggleCaseStudy('modal-2')">
+            View workflow →
+          </button>
+</div>
+<!-- Project 3 -->
+<div class="group rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between gap-2 mb-5">
+<span class="text-xs font-medium px-3 py-1 rounded-full bg-surface-container text-on-surface-variant">Healthcare · Market Intelligence · Automation</span>
+<span class="text-xs font-semibold text-secondary flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed/15">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Internal System
+              </span>
+</div>
+<h3 class="text-2xl font-bold text-primary tracking-tight font-sans">Healthcare Market Intelligence</h3>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">
+              An automated intelligence pipeline that finds, structures, stores and distributes healthcare market signals while connecting intelligence to an existing business-development workflow.
+            </p>
+</div>
+<button class="mt-8 inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:text-secondary transition-colors self-start" onclick="toggleCaseStudy('modal-3')">
+            View workflow →
+          </button>
+</div>
+<!-- Project 4 -->
+<div class="group rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between gap-2 mb-5">
+<span class="text-xs font-medium px-3 py-1 rounded-full bg-surface-container text-on-surface-variant">Agency Workflow Automation · Internal Operations</span>
+<span class="text-xs font-semibold text-secondary flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed/15">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Client Project
+              </span>
+</div>
+<h3 class="text-2xl font-bold text-primary tracking-tight font-sans">Internal Operations System</h3>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">
+              A centralized operational workspace built around an agency's actual workflow, bringing tasks, projects, clients and communication into one structured system.
+            </p>
+</div>
+<button class="mt-8 inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:text-secondary transition-colors self-start" onclick="toggleCaseStudy('modal-4')">
+            View case study →
+          </button>
+</div>
+</div>
+<!-- Portfolio Disclaimer -->
+<div class="mt-8 text-center">
+<p class="text-xs text-outline max-w-2xl mx-auto leading-relaxed italic">
+            Selected work includes prototypes, internal systems, demonstrations and client work. Examples show how we approach operational problems; production outcomes are only stated where measured.
+          </p>
+</div>
+</section>
+<!-- SECTION 5 — APPROACH -->
+<section class="mt-space-2xl py-12 rounded-xl bg-surface-container-low/80 border border-outline-variant/20 px-6 md:px-12">
+<div class="max-w-3xl mb-10">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest block mb-2">OUR PHILOSOPHY</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary tracking-tight">
+            Start with the problem. Not the technology.
+          </h2>
+<p class="text-lg text-on-surface-variant mt-3 leading-relaxed">
+            The right automation starts with understanding how the work actually happens.
+          </p>
+</div>
+<!-- 5 Stepped Process Cards -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+<div class="p-5 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-secondary block mb-2">01 / UNDERSTAND</span>
+<p class="text-sm font-semibold text-primary leading-snug">
+                Understand the existing workflow, people, tools and constraints.
+              </p>
+</div>
+<span class="material-symbols-outlined text-outline mt-6 self-end">hearing</span>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-secondary block mb-2">02 / MAP</span>
+<p class="text-sm font-semibold text-primary leading-snug">
+                Identify repetition, friction, handoffs and opportunities.
+              </p>
+</div>
+<span class="material-symbols-outlined text-outline mt-6 self-end">schema</span>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-secondary block mb-2">03 / BUILD</span>
+<p class="text-sm font-semibold text-primary leading-snug">
+                Create a focused system around the highest-value problem.
+              </p>
+</div>
+<span class="material-symbols-outlined text-outline mt-6 self-end">build_circle</span>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-secondary block mb-2">04 / TEST</span>
+<p class="text-sm font-semibold text-primary leading-snug">
+                Put the system into the actual workflow or realistic test scenarios and observe what happens.
+              </p>
+</div>
+<span class="material-symbols-outlined text-outline mt-6 self-end">visibility</span>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-bold text-secondary block mb-2">05 / IMPROVE</span>
+<p class="text-sm font-semibold text-primary leading-snug">
+                Measure where possible, refine and expand only where it creates useful value.
+              </p>
+</div>
+<span class="material-symbols-outlined text-outline mt-6 self-end">upgrade</span>
+</div>
+</div>
+<!-- Principles callout -->
+<div class="mt-8 p-5 rounded-lg bg-surface-container-highest/60 border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-4">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Guiding Principles</span>
+<div class="flex flex-wrap items-center gap-4 md:gap-8 text-sm font-semibold text-primary">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span>No AI for the sake of AI.</span>
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span>Small problems before big systems.</span>
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span>Useful outcomes over impressive demos.</span>
+</div>
+</div>
+</section>
+<!-- SECTION 6 — ABOUT -->
+<section class="mt-space-2xl pt-6" id="about">
+<div class="rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-8 md:p-14 shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest block mb-2">ABOUT RESOLVE</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary tracking-tight">
+                RESOLVE is being built around a simple idea.
+              </h2>
+<blockquote class="text-xl md:text-2xl text-primary font-semibold mt-6 leading-snug border-l-2 border-secondary pl-4">
+                “Most businesses don't need more software. They need the work they already do to become simpler.”
+              </blockquote>
+<p class="text-base text-on-surface-variant mt-5 leading-relaxed">
+                We study how work actually happens, identify where repetitive tasks, scattered information or manual decisions create friction, and build focused AI-assisted systems around those problems.
+              </p>
+</div>
+<!-- Founder Bio Card -->
+<div class="lg:col-span-5 rounded-xl bg-surface-container-low border border-outline-variant/30 p-6 md:p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-4">
+<img alt="Subash Chandra Bose" class="w-16 h-16 rounded-full object-cover ring-2 ring-outline-variant/30 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1sf95wLmSGNm-0X_IVzkmIN0II4HO2upg3WXCwxN4zU_NH4UhHfORqXfOGVXJy0HDt_lbWS6xMxRztxC2w80mgoKF5TefF0caf08X1hrmo8e7GcI_GlTC-Yj27RBhoYSkZn1LYXI6NQfrDPfctYV6g0DOQ2NwXYIpojnTYoFmDz41pVgJ6oijMgN4bolHkOJd7OOgrlNst96yBJezJX00AEZj9wIQmoVqEEM9xdkaGg-oXhEjFnYUH0wK4sNCfGhbpg"/>
+<div>
+<h3 class="text-lg font-bold text-primary">Subash Chandra Bose</h3>
+<p class="text-sm font-semibold text-secondary">Founder / Builder</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                  AI &amp; Data Science background, focused on understanding business workflows and building practical AI systems around real operational problems.
+                </p>
+<!-- Core Values -->
+<div class="mt-6 pt-5 border-t border-outline-variant/30 space-y-2 text-xs font-semibold text-primary">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Understanding before building.
+                  </div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Useful systems over impressive demos.
+                  </div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Small experiments over assumptions.
+                  </div>
+</div>
+</div>
+<a class="mt-6 inline-flex items-center gap-2 text-secondary text-sm font-semibold hover:text-primary transition-colors" href="https://linkedin.com/in/subashchandrabosem" rel="noopener noreferrer" target="_blank">
+                Connect on LinkedIn →
+              </a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7 — START A CONVERSATION -->
+<section class="mt-space-2xl mb-12" id="contact">
+<div class="rounded-xl bg-primary-container p-8 md:p-14 text-on-primary shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Contact Left Overview -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold text-secondary-fixed uppercase tracking-widest block mb-2">Direct Engagement</span>
+<h2 class="text-3xl md:text-4xl font-bold text-on-primary tracking-tight">
+                  Tell us what takes too much time.
+                </h2>
+<p class="text-base text-on-primary/80 mt-4 leading-relaxed">
+                  You don't need to know what technology you need. Tell us how the process works today and we'll help determine whether there's something worth improving.
+                </p>
+</div>
+<!-- Direct Contact Anchors -->
+<div class="mt-10 space-y-4 pt-8 border-t border-on-primary/15">
+<a class="flex items-center gap-3 text-on-primary hover:text-secondary-fixed transition-colors" href="https://wa.me/918778113185" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-secondary-fixed">chat</span>
+<span class="text-sm font-semibold">WhatsApp: +91 8778113185</span>
+</a>
+<a class="flex items-center gap-3 text-on-primary hover:text-secondary-fixed transition-colors" href="mailto:subash@withresolve.in">
+<span class="material-symbols-outlined text-secondary-fixed">mail</span>
+<span class="text-sm font-semibold">Email: subash@withresolve.in</span>
+</a>
+<a class="flex items-center gap-3 text-on-primary hover:text-secondary-fixed transition-colors" href="https://linkedin.com/in/subashchandrabosem" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-secondary-fixed">link</span>
+<span class="text-sm font-semibold">LinkedIn: linkedin.com/in/subashchandrabosem</span>
+</a>
+</div>
+</div>
+<!-- Contact Right Form (Targeting Formspree) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-6 md:p-8 text-on-surface shadow-md">
+<form action="https://formspree.io/f/YOUR_FORMSPREE_FORM_ID" class="space-y-4" id="contact-form" method="POST" onsubmit="handleFormspreeSubmit(event)">
+<!-- Hidden fields -->
+<input name="subject" type="hidden" value="New RESOLVE Website Enquiry"/>
+<input name="_to" type="hidden" value="subash.exec@gmail.com"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1">Your Name *</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 text-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary" name="name" placeholder="Your name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1">Company *</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 text-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary" name="company" placeholder="Company name" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1">Work Email *</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 text-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary" name="email" placeholder="work@company.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1">What does your company do?</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 text-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary" name="company_description" placeholder="e.g. Healthcare clinic, real estate advisory..." type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1">What process would you like to improve? *</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 text-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary" name="process_to_improve" placeholder="e.g. Document review, lead follow-up..." required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1">How does it work today?</label>
+<textarea class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 text-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary" name="current_workflow" placeholder="Describe current manual steps..." rows="3"></textarea>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1">Anything else?</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 text-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary" name="notes" placeholder="Timeline, constraints, tools used..." type="text"/>
+</div>
+<div class="pt-2">
+<button class="w-full py-3.5 rounded-full bg-primary-container text-on-primary text-sm font-bold hover:bg-secondary transition-all shadow-md flex items-center justify-center gap-2" id="submit-btn" type="submit">
+<span>Discuss the workflow →</span>
+</button>
+<!-- Form Feedback Messages -->
+<div class="hidden text-center p-3 rounded-lg bg-secondary-fixed/20 text-secondary text-sm font-semibold mt-3" id="form-success">
+                    Thanks. We've received your note and will review the workflow.
+                  </div>
+<div class="hidden text-center p-3 rounded-lg bg-error-container text-error text-sm font-medium mt-3" id="form-error">
+                    Something went wrong. Please try again or contact us directly at <a class="underline font-bold" href="mailto:subash@withresolve.in">subash@withresolve.in</a> or WhatsApp.
+                  </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- INTERACTIVE MODALS FOR DETAILED ARCHITECTURES AND WORKFLOWS -->
+<!-- Modal 1: AI Sales Opportunity Assistant -->
+<div aria-labelledby="modal-1-title" aria-modal="true" class="fixed inset-0 z-50 bg-primary/70 backdrop-blur-sm hidden items-center justify-center p-4" id="modal-1" onclick="handleBackdropClick(event, 'modal-1')" role="dialog">
+<div class="max-w-2xl w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/30">
+<div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">PROJECT 01 · WORKFLOW</span>
+<h3 class="text-2xl font-bold text-primary mt-1" id="modal-1-title">AI Sales Opportunity Assistant</h3>
+</div>
+<button aria-label="Close modal" class="p-2 rounded-full hover:bg-surface-container text-primary" onclick="toggleCaseStudy('modal-1')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-6 mt-6">
+<!-- Section 1 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">The Problem</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Sales teams managing property enquiries handle repeated calls, WhatsApp conversations, meetings, site visits and follow-ups. Important context, next actions and follow-up dates can become scattered across manual notes and existing systems.
+          </p>
+</div>
+<!-- Section 2 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">What We Built</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            A lightweight AI-assisted sales opportunity management prototype that converts salesperson interaction notes into structured opportunity intelligence and identifies what should happen next.
+          </p>
+</div>
+<!-- Section 3: Workflow Diagram Cards -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-2.5">Workflow Architecture</h4>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/20 font-mono text-xs space-y-2">
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">SALES INTERACTION</span>
+<span class="text-on-surface-variant text-xs">Customer interaction recorded (memo / notes)</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">AI ANALYSIS</span>
+<div class="flex flex-wrap gap-1.5 text-[11px] text-on-surface-variant mt-1 font-sans">
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">Requirement</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">Sales stage</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">Interaction summary</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">Next action</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">Follow-up date</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">Waiting party</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">Potential risk</span>
+</div>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">FOLLOW-UP ASSISTANT</span>
+<span class="text-on-surface-variant text-xs font-sans">Contextual follow-up draft</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">OPPORTUNITY DASHBOARD</span>
+<div class="flex flex-wrap gap-2 text-xs text-on-surface-variant font-sans mt-0.5">
+<span class="text-primary font-bold">Active</span> · <span>Upcoming</span> · <span>Overdue</span> · <span>Dormant</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Validation</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            The prototype was tested using realistic real-estate sales interaction scenarios.
+          </p>
+</div>
+<!-- Section 5 -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/30">
+<h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Important Note</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            This is a prototype demonstrating the workflow concept. It has not been validated using live company sales data and does not claim measurable revenue, conversion or productivity improvements.
+          </p>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex justify-end">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary text-sm font-semibold hover:bg-secondary transition-colors" onclick="toggleCaseStudy('modal-1')">
+          Close Workflow
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal 2: Hospital Compliance Intelligence -->
+<div aria-labelledby="modal-2-title" aria-modal="true" class="fixed inset-0 z-50 bg-primary/70 backdrop-blur-sm hidden items-center justify-center p-4" id="modal-2" onclick="handleBackdropClick(event, 'modal-2')" role="dialog">
+<div class="max-w-2xl w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/30">
+<div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">PROJECT 02 · WORKFLOW</span>
+<h3 class="text-2xl font-bold text-primary mt-1" id="modal-2-title">Hospital Compliance Intelligence</h3>
+</div>
+<button aria-label="Close modal" class="p-2 rounded-full hover:bg-surface-container text-primary" onclick="toggleCaseStudy('modal-2')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-6 mt-6">
+<!-- Section 1 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">The Problem</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Hospital planning requires architectural drawings to be checked against requirements spread across multiple healthcare planning, building, accessibility and safety sources.
+          </p>
+</div>
+<!-- Section 2 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">What We Built</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            An AI-assisted first-pass screening and audit-support system designed to turn complex hospital drawings into structured compliance intelligence.
+          </p>
+</div>
+<!-- Section 3: Workflow Diagram Cards -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-2.5">Workflow Architecture</h4>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/20 font-mono text-xs space-y-2">
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">HOSPITAL FLOOR PLAN</span>
+<span class="text-on-surface-variant text-xs font-sans">PDF / drawing input</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">DOCUMENT ANALYSIS</span>
+<span class="text-on-surface-variant text-xs font-sans">Rendered page information · Embedded text · Visual layout information</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">STRUCTURED RULEBOOK</span>
+<span class="text-on-surface-variant text-xs font-sans">Healthcare · Building · Accessibility · Safety</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">COMPLIANCE EVALUATION</span>
+<span class="text-on-surface-variant text-xs font-sans">Rule matching · Conflict handling · Risk classification</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">COMPLIANCE OUTPUT</span>
+<span class="text-on-surface-variant text-xs font-sans">Findings · Risk indicators · References · Compliance ledger</span>
+</div>
+</div>
+</div>
+<!-- Section 4 -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-secondary-fixed/30">
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Engineering Principle</h4>
+<p class="text-sm text-primary font-semibold">“Confidence is not the goal. Traceability is.”</p>
+</div>
+<!-- Section 5 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Validation</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Tested against a real hospital drawing set from Suasth Hospital, Navi Mumbai. The first test surfaced weaknesses in classification, rule handling, compliance reporting and reconciliation transparency. Those findings were used to refine the system.
+          </p>
+</div>
+<!-- Section 6 -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/30">
+<h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Important Limitation</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            This is an AI-assisted first-pass screening and audit-support system. It does not replace licensed engineering, architectural, regulatory or AHJ review.
+          </p>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex justify-end">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary text-sm font-semibold hover:bg-secondary transition-colors" onclick="toggleCaseStudy('modal-2')">
+          Close Workflow
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal 3: Healthcare Market Intelligence -->
+<div aria-labelledby="modal-3-title" aria-modal="true" class="fixed inset-0 z-50 bg-primary/70 backdrop-blur-sm hidden items-center justify-center p-4" id="modal-3" onclick="handleBackdropClick(event, 'modal-3')" role="dialog">
+<div class="max-w-2xl w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/30">
+<div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">PROJECT 03 · WORKFLOW</span>
+<h3 class="text-2xl font-bold text-primary mt-1" id="modal-3-title">Healthcare Market Intelligence</h3>
+</div>
+<button aria-label="Close modal" class="p-2 rounded-full hover:bg-surface-container text-primary" onclick="toggleCaseStudy('modal-3')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-6 mt-6">
+<!-- Section 1 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">The Problem</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Healthcare business-development intelligence can require repeated manual research, analysis and report preparation. The challenge is turning scattered market activity into a structured and actionable intelligence workflow.
+          </p>
+</div>
+<!-- Section 2 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">What We Built</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            An automated intelligence pipeline that finds, structures, stores and distributes healthcare market signals while connecting intelligence to an existing business-development workflow.
+          </p>
+</div>
+<!-- Section 3: Workflow Diagram Cards -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-2.5">Workflow Architecture</h4>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/20 font-mono text-xs space-y-2">
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">01 / DISCOVER</span>
+<span class="text-on-surface-variant text-xs font-sans">Healthcare market signals</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">02 / ANALYSE</span>
+<span class="text-on-surface-variant text-xs font-sans">AI-structured intelligence</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">03 / REMEMBER</span>
+<span class="text-on-surface-variant text-xs font-sans">Persistent intelligence record</span>
+</div>
+<div class="text-center text-outline text-xs">↓</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<span class="font-bold text-[11px] text-secondary uppercase block mb-1 font-sans">04 / ACT</span>
+<span class="text-on-surface-variant text-xs font-sans">Email digest · ClickUp task</span>
+</div>
+</div>
+</div>
+<!-- Section 4 -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/30">
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Core Idea</h4>
+<p class="text-sm text-primary font-semibold">Information → Intelligence → Action</p>
+</div>
+<!-- Section 5 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Validation</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Benchmarked against real legacy reports previously produced manually by the analyst.
+          </p>
+</div>
+<!-- Section 6 -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/30">
+<h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Important Note</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            This is an internal intelligence and decision-support workflow designed to augment human market analysis rather than replace human judgment.
+          </p>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex justify-end">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary text-sm font-semibold hover:bg-secondary transition-colors" onclick="toggleCaseStudy('modal-3')">
+          Close Workflow
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal 4: Internal Operations System (Client Case Study) -->
+<div aria-labelledby="modal-4-title" aria-modal="true" class="fixed inset-0 z-50 bg-primary/70 backdrop-blur-sm hidden items-center justify-center p-4" id="modal-4" onclick="handleBackdropClick(event, 'modal-4')" role="dialog">
+<div class="max-w-2xl w-full bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/30">
+<div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">CLIENT CASE STUDY</span>
+<h3 class="text-2xl font-bold text-primary mt-1" id="modal-4-title">Internal Operations System</h3>
+</div>
+<button aria-label="Close modal" class="p-2 rounded-full hover:bg-surface-container text-primary" onclick="toggleCaseStudy('modal-4')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-6 mt-6">
+<!-- Section 1 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">The Problem</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Continuity Studios was managing task assignments, client updates, team communication and operational follow-ups through WhatsApp. Tasks could get lost in group chats, deadlines could slip and the founder had to manually chase the team to understand what was completed.
+          </p>
+</div>
+<!-- Section 2 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">What We Built</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            A custom internal operations platform built around the agency's actual workflow. It includes: Separate admin and team-member portals, centralized task management, project and client tracking, in-app communication, automated email workflows, and role-based access.
+          </p>
+</div>
+<!-- Section 3: Operational Workflow Diagram Cards -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-2.5">Operational Workflow</h4>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/20 font-mono text-xs">
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-primary">
+<div class="text-xs leading-relaxed text-on-surface-variant font-sans flex flex-wrap items-center gap-1.5">
+<span class="font-bold text-secondary">TASK CREATED</span>
+<span class="text-outline">→</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">ASSIGNED TO TEAM MEMBER</span>
+<span class="text-outline">→</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">EMAIL NOTIFICATION</span>
+<span class="text-outline">→</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">PROGRESS UPDATED</span>
+<span class="text-outline">→</span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-medium text-primary">TASK COMPLETED</span>
+<span class="text-outline">→</span>
+<span class="font-bold text-secondary">COMPLETION ALERT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Technical Stack</h4>
+<div class="p-3 bg-surface-container-low rounded-lg border border-outline-variant/30 text-xs font-medium text-primary">
+            Base44 · Make.com · Webhooks · Automated Email
+          </div>
+</div>
+<!-- Section 5 -->
+<div>
+<h4 class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Outcome</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            A centralized professional workspace replaced fragmented operational communication through WhatsApp, giving the founder greater visibility into work and the team a structured place to manage tasks and communication.
+          </p>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex justify-end">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary text-sm font-semibold hover:bg-secondary transition-colors" onclick="toggleCaseStudy('modal-4')">
+          Close Case Study
+        </button>
+</div>
+</div>
+</div>
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile md:px-margin py-12 md:py-16">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b border-outline-variant/20">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<img alt="RESOLVE Logo" class="w-7 h-7 rounded-full object-cover ring-1 ring-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkROcuHamXb5fuchU4bK3WD66Wxf3SOnnX-xFtM1Q1A9DmKNeAWTE6yhxB94E69kYzQrFnet0GQUUGG_yqHK1wVXTqQP-ztvXzoqwTjc8QFCP-l1F_rn4So04AAAYIfncX_g3WmWoD8O5s8lwhblcsV569jkCsyHMEuywt_ogZjDyOPp2nFKbMUDWmfBzM_yIIAg924eJ1qzuarBSAnD_GRBa09qOKMkwbKvsi-bcJHheHCgluyPLvgGxv6xwXcMHveA"/>
+<span class="text-lg tracking-tight font-bold text-primary">RESOLVE</span>
+</div>
+<p class="text-sm text-on-surface-variant max-w-sm">
+            Practical systems. Useful outcomes.
+          </p>
+</div>
+<nav class="flex flex-wrap items-center gap-6 md:gap-8">
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#work">Work</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#approach">Approach</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+</div>
+<div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="text-xs text-outline">© 2026 RESOLVE. All rights reserved.</p>
+<p class="text-xs text-outline">Built around real business workflows.</p>
+</div>
+</div>
+</footer>
+<script>
+    // Modal toggle with body scroll locking
+    function toggleCaseStudy(modalId) {
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Backdrop click closing
+    function handleBackdropClick(event, modalId) {
+      if (event.target.id === modalId) {
+        toggleCaseStudy(modalId);
+      }
+    }
+
+    // ESC key closes any open modal
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const modals = ['modal-1', 'modal-2', 'modal-3', 'modal-4'];
+        modals.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && !el.classList.contains('hidden')) {
+            toggleCaseStudy(id);
+          }
+        });
+      }
+    });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.textContent = 'close';
+      } else {
+        menu.classList.add('hidden');
+        icon.textContent = 'menu';
+      }
+    }
+
+    // Real Formspree AJAX Submission
+    async function handleFormspreeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const btn = document.getElementById('submit-btn');
+      const successMsg = document.getElementById('form-success');
+      const errorMsg = document.getElementById('form-error');
+
+      successMsg.classList.add('hidden');
+      errorMsg.classList.add('hidden');
+
+      const originalBtnText = btn.innerHTML;
+      btn.innerHTML = '<span>Submitting...</span>';
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          form.reset();
+          btn.classList.add('hidden');
+          successMsg.classList.remove('hidden');
+        } else {
+          btn.innerHTML = originalBtnText;
+          btn.disabled = false;
+          errorMsg.classList.remove('hidden');
+        }
+      } catch (err) {
+        btn.innerHTML = originalBtnText;
+        btn.disabled = false;
+        errorMsg.classList.remove('hidden');
+      }
+    }
+  </script>
+</body></html>
